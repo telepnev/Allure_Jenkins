@@ -46,8 +46,9 @@ public class AllureSteps {
 
 
     @Test
-   // @DisplayName("Test with WEB steps")
+    @DisplayName("Test with WEB steps")
     public void testAnnotatedSteps() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         WebStep webStep = new WebStep();
 
         webStep.openMainPage();

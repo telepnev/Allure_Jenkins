@@ -39,6 +39,7 @@ public class WebStep {
     public void shouldSeeTextIssue(String issue) {
         $("h3 span").shouldHave(text(issue));
     }
+
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
     public byte[] takeScreenshot() {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);

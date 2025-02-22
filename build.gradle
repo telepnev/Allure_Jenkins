@@ -4,14 +4,14 @@ plugins {
 }
 
 allure {
-    report {
-        version.set('2.32.2')
+    report { // отвечает за появление папочки build/allure-results
+        version.set('2.32.2') //обработка аннотации @Step, для отдельных классов (не в коде тестов)
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
-            junt5 {
-                adapterVersion.set('2.32.2')
+            junt5 { //название фреймворка
+                adapterVersion.set('2.32.2') //версия интеграции фреймворка и Allure
             }
         }
     }
